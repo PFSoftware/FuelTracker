@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Views/FuelTracker.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FuelTracker.sqlite" />
+    <None Remove="Views\FuelTracker.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="FuelTracker.sqlite" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Extensions\PFSoftware.Extensions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\FuelTracker.ico" />
+  </ItemGroup>
+</Project>
