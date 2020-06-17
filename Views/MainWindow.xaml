@@ -15,6 +15,11 @@
         MinWidth="1032"
         Loaded="WindowMain_Loaded">
     <Viewbox Stretch="Uniform" Margin="20">
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Source="ViewVehiclesPage.xaml" />
+        <Frame x:Name="MainFrame"
+               ScrollViewer.VerticalScrollBarVisibility="Auto"
+               ScrollViewer.HorizontalScrollBarVisibility="Auto"
+               ScrollViewer.CanContentScroll="True"
+               NavigationUIVisibility="Hidden"
+               Source="ViewVehiclesPage.xaml" />
     </Viewbox>
 </Window>
