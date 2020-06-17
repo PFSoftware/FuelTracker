@@ -13,7 +13,6 @@ namespace PFSoftware.FuelTracker.Views
     /// <summary>Interaction logic for ViewVehiclesPage.xaml</summary>
     public partial class ViewVehiclesPage : INotifyPropertyChanged
     {
-        private bool _loaded;
         private List<Vehicle> _allVehicles;
         private ListViewSort _sort = new ListViewSort();
         private Vehicle _selectedVehicle;
@@ -100,10 +99,10 @@ namespace PFSoftware.FuelTracker.Views
 
         private async void ViewVehiclesPage_OnLoaded(object sender, RoutedEventArgs e)
         {
-            if (!_loaded)
+            if (!AppState.Loaded)
             {
                 await AppState.FileManagement();
-                _loaded = true;
+                AppState.Loaded = true;
             }
 
             RefreshItemsSource();

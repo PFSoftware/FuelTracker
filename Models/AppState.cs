@@ -16,6 +16,7 @@ namespace PFSoftware.FuelTracker.Models
     {
         public static readonly SQLiteDatabaseInteraction DatabaseInteraction = new SQLiteDatabaseInteraction();
         internal static List<Vehicle> AllVehicles = new List<Vehicle>();
+        public static bool Loaded = false;
 
         #region Navigation
 
